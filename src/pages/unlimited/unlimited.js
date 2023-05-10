@@ -17,10 +17,6 @@ const Unlimited = () => {
     useEffect(() => {
         const stats = JSON.parse(getLS('unlimited'))
 
-        if (!stats || state.song === '') {
-
-        }
-
     }, [])
 
 
@@ -41,9 +37,6 @@ const Unlimited = () => {
                     Unlimited - Swifti.es
                 </title>
             </Helmet>
-
-
-            <div className="text-center text-2xl">COMING SOON...</div>
 
         </>
     )
