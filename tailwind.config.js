@@ -6,6 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'background': 'var(--background)',
+        'primary': 'var(--primary)',
+        'secondary': 'var(--secondary)',
+        'accent': 'var(--accent)',
+        'text': 'var(--text)'
+
       }
     },
   },
