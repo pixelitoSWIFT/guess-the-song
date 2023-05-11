@@ -6,6 +6,7 @@ import Loading from "../../components/Loading"
 import Result from "../../components/Result"
 import BottomMenu from "../../components/BottomMenu"
 import Error from "../../components/Error"
+import Countdown from "../../components/Countdown"
 import { reducer, INITIAL_STATE, ACTIONS } from "./reducer"
 import { getLS, setLS } from "../../assets/helpers/localstorage"
 
@@ -125,7 +126,16 @@ const Daily = () => {
                         <Lyrics revealed={state.lyricsRevealed[3]}>{state.lyricsRevealed[3]}</Lyrics>
                         <Lyrics revealed={state.lyricsRevealed[4]}>{state.lyricsRevealed[4]}</Lyrics>
                     </div>
-                    {state.guessed !== '' && <Result song={state} guessed={state.guessed}></Result>}
+                    {state.guessed !== '' &&
+                        <div className="">
+                            <Result song={state} guessed={state.guessed}></Result>
+                            <div className="flex justify-center text-center">
+                                <div className='my-4 p-2 rounded-lg bg-zinc-800'>
+                                    <div className='text-lg'>Next song in</div>
+                                    <Countdown></Countdown>
+                                </div>
+                            </div>
+                        </div>}
 
                 </div>
                 <div className="">

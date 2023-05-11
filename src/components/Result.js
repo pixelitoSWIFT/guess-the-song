@@ -1,5 +1,4 @@
 import albums from '../assets/JSON/albums.json';
-import Countdown from './Countdown';
 
 const Result = ({ song, guessed }) => {
 
@@ -14,11 +13,7 @@ const Result = ({ song, guessed }) => {
                 </div>
                 <div className='font-bold text-2xl'>{song.song}</div>
                 <div className='text-xl'>{song.album}</div>
-                <div className='my-4 p-2 rounded-lg bg-zinc-800'>
-                    <div className='text-lg'>Next song in</div>
-                    <Countdown></Countdown>
-
-                </div>
+              
             </div>
 
         </>
