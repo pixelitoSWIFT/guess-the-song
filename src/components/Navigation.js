@@ -55,7 +55,9 @@ const Navigation = () => {
                     </div>
                     <div className="text-xl font-bold p-2 bg-zinc-700 rounded-lg">Unlimited mode</div>
                     <div className="text-lg my-2">
-                        COMING SOON...
+                        <div className="">Played : <span className="font-bold">{unlimited ? unlimited.gamesPlayed || 0 : 0}</span></div>
+                        <div className="">Current streak : <span className="font-bold">{unlimited ? unlimited.currentStreak : 0}</span></div>
+                        <div className="">Max streak : <span className="font-bold">{unlimited ? unlimited.maxStreak : 0}</span></div>
                     </div>
                 </div>
             </Modal>}

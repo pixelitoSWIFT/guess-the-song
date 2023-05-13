@@ -9,7 +9,8 @@ export const INITIAL_STATE = {
     guessed: '',
     currentStreak: 0,
     maxStreak: 0,
-    playing: false
+    playing: false,
+    gamesPlayed: 0
 }
 
 export const ACTIONS = {
@@ -63,7 +64,8 @@ export const reducer = (state, action) => {
                 playing: false,
                 state: ACTIONS.GAME_OVER,
                 currentStreak: 0,
-                guessed: false
+                guessed: false,
+                gamesPlayed: state.gamesPlayed + 1
             }
         }
         case ACTIONS.NEXT_SONG: {
