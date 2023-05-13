@@ -7,8 +7,8 @@ const Modal = ({ onClose, title, children }) => {
 
 
     return (
-        <div className="fixed top-0 left-0 w-full p-5 h-full flex justify-center items-center bg-black/70 z-10">
-            <div className="bg-background block p-2.5 rounded-lg relative w-full max-w-[700px]">
+        <div className="fixed top-0 left-0 w-full p-5 h-full flex justify-center items-center bg-black/70 z-10 overflow-auto">
+            <div className="bg-background block p-2.5 rounded-lg relative w-full max-w-[700px] ">
                 <div className="flex justify-between items-center border-b border-zinc-700 pb-2">
                     <div className="text-2xl">{title}</div>
                     <div className="bg-zinc-800 rounded-lg p-1">

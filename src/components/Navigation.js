@@ -63,9 +63,31 @@ const Navigation = () => {
             </Modal>}
             {modal === 2 && <Modal title="Information" onClose={() => { setModal(null) }}>
                 <div className="mt-2 text-center">
-                    <div className="text-xl font-bold p-2 bg-zinc-700 rounded-lg">How to play</div>
-                    <div className="my-2"><span className="font-bold">COMING SOON... </span>
-
+            
+                    <div className="my-2 ">
+                        <div className="">
+                            <div className="">
+                                <div className="text-xl font-bold p-2 bg-zinc-700 rounded-lg">Daily mode</div>
+                                <ul className="my-2">
+                                    <li>- A new song will be revealed daily at UTC midnight.</li>
+                                    <li>- You have 5 attempts to guess the song.</li>
+                                    <li>- Press "skip" to reveal an additional line of lyrics, up to a maximum of 5 lines.</li>
+                                    <li>- Incorrect guesses will deduct one attempt.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="">
+                            <div className="">
+                                <div className="text-xl font-bold p-2 bg-zinc-700 rounded-lg">Unlimited mode</div>
+                                <ul className="my-2">
+                                    <li>- Start with 5 tries.</li>
+                                    <li>- Deduct a try for each wrong guess or skip, revealing a line of lyrics each time.</li>
+                                    <li>- Correctly guessing adds a try and reveals a new song.</li>
+                                    <li>- Maximum of 5 tries.</li>
+                                    <li>- Game ends if you run out of tries.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
