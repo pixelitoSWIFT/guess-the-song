@@ -11,7 +11,7 @@ const Navigation = () => {
 
 
     const daily = JSON.parse(getLS('daily'))
-    // const unlimited = JSON.parse(getLS('unlimited'))
+    const unlimited = JSON.parse(getLS('unlimited'))
 
 
     useEffect(() => {
@@ -47,10 +47,11 @@ const Navigation = () => {
                 <div className="mt-2 text-center">
                     <div className="text-xl font-bold p-2 bg-zinc-700 rounded-lg">Daily mode</div>
                     <div className="text-lg my-2">
-                        <div className="">Played : <span className="font-bold">{daily.gamesPlayed}</span></div>
-                        <div className="">Win percentage : <span className="font-bold">{Math.floor(((daily.gamesWon / daily.gamesPlayed) * 100)) || 0}%</span></div>
-                        <div className="">Current streak : <span className="font-bold">{daily.dayStreak}</span></div>
-                        <div className="">Max streak : <span className="font-bold">{daily.maxStreak}</span></div>
+
+                        <div className="">Played : <span className="font-bold">{daily ? daily.gamesPlayed || 0 : 0}</span></div>
+                        <div className="">Win percentage : <span className="font-bold">{daily ? Math.floor(((daily.gamesWon / daily.gamesPlayed) * 100)) || 0 : 0}%</span></div>
+                        <div className="">Current streak : <span className="font-bold">{daily ? daily.dayStreak : 0}</span></div>
+                        <div className="">Max streak : <span className="font-bold">{daily ? daily.maxStreak : 0}</span></div>
                     </div>
                     <div className="text-xl font-bold p-2 bg-zinc-700 rounded-lg">Unlimited mode</div>
                     <div className="text-lg my-2">

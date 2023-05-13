@@ -1,13 +1,12 @@
 import albums from '../assets/JSON/albums.json';
 
-const Result = ({ song, guessed }) => {
+const Result = ({ song }) => {
 
 
     return (
 
         <>
             <div className='flex flex-col text-center justify-center items-center'>
-                <div className='text-2xl font-bold'>{guessed ? "You've guessed it!" : "Not guessed, good luck next time!"}</div>
                 <div className='overflow-hidden h-64 w-64 rounded-lg my-2'>
                     <img alt={song.album} className='h-full w-full' src={'/images/albums/' + albums[song.album] + '.png'}></img>
                 </div>

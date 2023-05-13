@@ -128,7 +128,8 @@ const Daily = () => {
                     </div>
                     {state.guessed !== '' &&
                         <div className="">
-                            <Result song={state} guessed={state.guessed}></Result>
+                            <div className='text-2xl font-bold text-center'>{state.guessed ? "You've guessed it!" : "Not guessed, good luck next time!"}</div>
+                            <Result song={state} ></Result>
                             <div className="flex justify-center text-center">
                                 <div className='my-4 p-2 rounded-lg bg-zinc-800'>
                                     <div className='text-lg'>Next song in</div>
