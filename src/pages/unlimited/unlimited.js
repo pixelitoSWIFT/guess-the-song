@@ -114,7 +114,7 @@ const Unlimited = () => {
                     <>
                         <div className="my-2">
                             <div className="grid text-center grid-cols-3 px-2 bg-zinc-800 border border-primary rounded-lg">
-                                <div className="py-2.5">Current streak: <span className="font-bold">{state.currentStreak}</span></div>
+                                <div className="py-2.5">Streak: <span className="font-bold">{state.currentStreak}</span></div>
                                 <div className="py-2.5">Tries: <span className="font-bold">{state.tries}</span></div>
                                 <div className="py-2.5">Max streak: <span className="font-bold">{state.maxStreak}</span></div>
                             </div>
@@ -129,7 +129,7 @@ const Unlimited = () => {
                                 <div className="">
                                     <div className='text-2xl font-bold text-center'>{state.guessed ? "You've guessed it!" : "Not guessed, game is over!"}</div>
                                     <Result song={state} ></Result>
-                                    <div className="flex justify-center mt-2">
+                                    <div className="flex justify-center my-2">
                                         <NormalButton action={state.guessed ? nextSong : startGame}>{state.guessed ? 'NEXT SONG' : 'NEW GAME'}</NormalButton>
                                     </div>
                                 </div>}
