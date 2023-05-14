@@ -53,7 +53,7 @@ const Unlimited = () => {
         setChosenSong('')
         if (state.tries <= 1) {
             setError('')
-            dispatch({ type: ACTIONS.GAME_OVER })
+            dispatch({ type: ACTIONS.GAME_OVER, payload: { lyricsRevealed: [...state.lyrics] } })
         }
         else {
             dispatch({ type: ACTIONS.SKIP })
